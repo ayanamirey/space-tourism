@@ -847,6 +847,7 @@ label:hover circle {
 
   .menu__list.active {
     transform: translateY(0);
+    z-index: 20;
   }
 
   .menu__item {
