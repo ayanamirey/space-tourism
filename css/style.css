@@ -847,7 +847,7 @@ label:hover circle {
 
   .menu__list.active {
     transform: translateY(0);
-    z-index: 20;
+    z-index: 10;
   }
 
   .menu__item {
@@ -930,6 +930,18 @@ label:hover circle {
 
   .contacts__guarantees {
     width: 100%;
+  }
+
+  .slider__arrow {
+    top: 106%;
+  }
+
+  .slider__arrow-right {
+    right: 30px;
+  }
+
+  .slider__arrow-left {
+    left: 30px;
   }
 }
 
