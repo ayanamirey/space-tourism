@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'sf-pro-display';
   src: url('../fonts/SF-Pro-Display-Regular.woff2') format('woff2'),
@@ -49,6 +53,16 @@ body {
   line-height: 19px;
   font-weight: 400;
   color: #fff;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .container {
@@ -77,12 +91,19 @@ body {
 }
 
 .button:hover {
-  background-color: #CB0E0E;
-  color: #fff;
-  transition: 1s ease-in-out;
-  transform: translateY(-3px);
-  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
-  border-color: #CB0E0E;
+  background-color: #fff;
+  color: #000;
+  transition: .4s ease-in-out;
+  box-shadow:
+    1px 1px #ffff00,
+    2px 2px #ffff00,
+    3px 3px #ffff00,
+    4px 4px #ffff00,
+    5px 5px #ffff00,
+    6px 6px #ffff00,
+    7px 7px #ffff00;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
 }
 
 .button::after {
@@ -134,8 +155,14 @@ body {
   transition: color .5s;
 }
 
+.menu__link {
+  color: #fff;
+  transition: .4s all;
+  padding-bottom: 5px;
+}
+
 .menu__link:hover {
-  color: #CB0E0E;
+  color: #ffff00;
 }
 
 .phone {
@@ -390,7 +417,7 @@ foreignObject {
 }
 
 .special-offer__item-text span {
-  color: #CB0E0E;
+  color: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
 .special-offer__old-price {
@@ -406,7 +433,7 @@ foreignObject {
   position: absolute;
   width: 68px;
   height: 1px;
-  background-color: #CB0E0E;
+  background-color: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
   top: 7px;
   right: 0;
   transform: rotate(15deg);
@@ -526,7 +553,7 @@ foreignObject {
 }
 
 .contacts {
-  background-color: #010203;
+  background-color: transparent;
   padding-bottom: 100px;
 }
 
@@ -637,7 +664,7 @@ foreignObject {
 
 .footer__menu-link:hover,
 .footer__links-link:hover {
-  color: #CB0E0E;
+  color: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
 .menu-btn {
@@ -645,8 +672,8 @@ foreignObject {
   width: 40px;
   height: 30px;
   padding: 0;
-  /* position: relative; */
   z-index: 20;
+  /* position: relative; */
 }
 
 /* .menu-btn span {
@@ -695,12 +722,12 @@ foreignObject {
   transition: all .8s cubic-bezier(.645, .045, .355, 1);
 }
 
-circle {
+.menu-btn circle {
   fill: #fff3;
   opacity: 0;
 }
 
-label:hover circle {
+.menu-btn label:hover circle {
   opacity: 1;
 }
 
@@ -725,6 +752,7 @@ label:hover circle {
   position: absolute;
   cursor: pointer;
   top: -2px;
+  left: -10px;
 }
 
 .menu-btn label {
@@ -943,6 +971,10 @@ label:hover circle {
   .slider__arrow-left {
     left: 30px;
   }
+
+  .menu__item {
+    margin-right: 0;
+  }
 }
 
 @media(max-width:720px) {
@@ -1118,7 +1150,7 @@ label:hover circle {
 
   .services__title,
   .to-book__title {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .contacts__guarantees-text {

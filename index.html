@@ -13,15 +13,17 @@
   </head>
 
   <body>
+    <canvas>
+    </canvas>
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__inner">
           <div class="header__top">
             <nav class="menu">
               <!-- <button class="menu-btn">
-                <span></span>
-              </button> -->
+                  <span></span>
+                </button> -->
               <div class="cross menu-btn">
                 <label>
                   <input type="checkbox">
@@ -35,19 +37,19 @@
               </div>
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">О НАС </a>
+                  <a class="menu__link" href="#about">О НАС</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">СТОИМОСТЬ</a>
+                  <a class="menu__link" href="#special-offer">СТОИМОСТЬ</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">ДОП. УСЛУГИ</a>
+                  <a class="menu__link" href="#services">ДОП. УСЛУГИ</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">ГАРАНТИИ</a>
+                  <a class="menu__link" href="#contacts">ГАРАНТИИ</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">НОВОСТИ</a>
+                  <a class="menu__link" href="#to-book">НОВОСТИ</a>
                 </li>
               </ul>
             </nav>
@@ -79,10 +81,11 @@
           </div>
         </div>
       </div>
+
     </header>
 
     <main class="main">
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <h2 class="title">
             О нас
@@ -260,7 +263,7 @@
           </div>
         </div>
       </section>
-      <section class="how-to">
+      <section class="how-to" id="how-to">
         <div class="container">
           <h2 class="title">
             Как все <br>
@@ -342,7 +345,7 @@
           </div>
         </div>
       </section>
-      <section class="to-book">
+      <section class="to-book" id="to-book">
         <div class="container">
           <div class="to-book__inner">
             <h2 class="title to-book__title">Успей<br>
@@ -356,8 +359,8 @@
           </div>
         </div>
       </section>
-      <section class="info">
-        <div class="special-offer">
+      <section class="info" id="info">
+        <div class="special-offer" id="special-offer">
           <div class="container">
             <h2 class="title">
               Спец. <br>
@@ -395,7 +398,7 @@
             </div>
           </div>
         </div>
-        <div class="services">
+        <div class="services" id="services">
           <div class="container">
             <h2 class="title services__title">
               Дополнительные<br>
@@ -451,7 +454,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__inner">
             <div class="contacts__box">
@@ -462,9 +465,9 @@
                 Оставь свои контакты и мы перезвоним тебе в ближайшие 100 лет!
               </p>
               <form class="contacts__form">
-                <input class="contacts__form-input" type="text" placeholder="ФИО">
-                <input class="contacts__form-input" type="text" placeholder="Имя ребенка или внука (на всякий случай)">
-                <input class="contacts__form-input" type="tel" placeholder="Телефон">
+                <input class="contacts__form-input" pattern="^[A-Za-zА-Яа-яЁё\s]{6,}" type="text" placeholder="ФИО">
+                <input class="contacts__form-input" pattern="^[A-Za-zА-Яа-яЁё\s]{6,}" type="text" placeholder="Имя ребенка или внука (на всякий случай)">
+                <input class="contacts__form-input" type="tel" placeholder="Телефон" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
                 <button class="button contacts__btn" type="submit">ЗАБРОНИРОВАТЬ ПОЛЕТ</button>
               </form>
             </div>
@@ -483,7 +486,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__text">
@@ -496,19 +499,19 @@
           </div>
           <ul class="footer__menu">
             <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">О НАС </a>
+              <a class="footer__menu-link" href="#about">О НАС </a>
             </li>
             <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">СТОИМОСТЬ</a>
+              <a class="footer__menu-link" href="#special-offer">СТОИМОСТЬ</a>
             </li>
             <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">ДОП. УСЛУГИ</a>
+              <a class="footer__menu-link" href="#services">ДОП. УСЛУГИ</a>
             </li>
             <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">ГАРАНТИИ</a>
+              <a class="footer__menu-link" href="#contacts">ГАРАНТИИ</a>
             </li>
             <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">НОВОСТИ</a>
+              <a class="footer__menu-link" href="#to-book">НОВОСТИ</a>
             </li>
           </ul>
           <ul class="footer__links">
